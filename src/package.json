@@ -1,0 +1,6 @@
+{
+  "name": "scaleup",
+  "dependencies": {
+    "@octokit/rest": "^18.0.12"
+  }
+}
