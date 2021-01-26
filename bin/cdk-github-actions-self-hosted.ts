@@ -5,8 +5,8 @@ import { CdkGithubActionsSelfHostedStack } from '../lib/cdk-github-actions-self-
 
 const app = new cdk.App();
 new CdkGithubActionsSelfHostedStack(app, 'CdkGithubActionsSelfHostedStack', {
-  env: {
-    region: '',
-    account: ''
-  }
+  // env: {
+  //   region: '',
+  //   account: ''
+  // }
 });

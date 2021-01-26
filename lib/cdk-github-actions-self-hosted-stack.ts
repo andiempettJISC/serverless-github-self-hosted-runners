@@ -18,9 +18,11 @@ export class CdkGithubActionsSelfHostedStack extends cdk.Stack {
     const vpcName: string = this.node.tryGetContext('vpc_name')
 
     // Import an existing VPC
-    const vpcCI = Vpc.fromLookup(this, 'vpc-ci', {
-      vpcName: vpcName
-    })
+    // const vpcCI = Vpc.fromLookup(this, 'vpc-ci', {
+    //   vpcName: vpcName
+    // })
+
+    const vpcCI = new Vpc(this, 'vpc-ci')
 
     const orgSecret = Secret.fromSecretNameV2(this, 'orgSecret', 'github/actions/runnerToken')
 
